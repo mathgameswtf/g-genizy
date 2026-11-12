@@ -243,7 +243,7 @@ function getZoneURL(file) {
     if (file.url && file.url.startsWith("http")) {
         return file.url;
     } else {
-        return "/games/" + file.name
+        return "g-genizy/games/" + file.name
             .replace(/ /g, '-')
             .toLowerCase()
             .replace(/[^a-z0-9-]/g, '')
