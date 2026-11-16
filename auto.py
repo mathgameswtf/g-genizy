@@ -19,7 +19,7 @@ TEMPLATE_HTML = """<!DOCTYPE html>
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://genizymath.github.io/">
+    <meta property="og:url" content="https://mathgameswtf.github.io/g-genizy/">
     <meta property="og:title" content="Play {GAME_NAME} | GN-Math Unblocked Games">
     <meta property="og:description" content="Play {GAME_NAME} unblocked on GN-Math - No downloads required! Enjoy this fun HTML5 game at school or work.">
     <meta property="og:image" content="{GAME_COVER}">
@@ -27,7 +27,7 @@ TEMPLATE_HTML = """<!DOCTYPE html>
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://genizymath.github.io/">
+    <meta property="twitter:url" content="https://mathgameswtf.github.io/g-genizy/">
     <meta property="twitter:title" content="Play {GAME_NAME} | GN-Math Unblocked Games">
     <meta property="twitter:description" content="Play {GAME_NAME} unblocked on GN-Math - No downloads required! Enjoy this fun HTML5 game at school or work.">
     <meta property="twitter:image" content="{GAME_COVER}">
@@ -184,7 +184,7 @@ TEMPLATE_HTML = """<!DOCTYPE html>
         <div class="game-frame-container">
             <iframe class="game-frame" id="gameFrame" allowfullscreen></iframe>
             <button class="fullscreen-btn" onclick="document.getElementById('gameFrame').requestFullscreen()">Fullscreen</button>
-            <button class="newtab-btn" onclick="window.open('https://genizymath.github.io/iframe/{PATHNAME}', '_blank')">Open in New Tab</button>
+            <button class="newtab-btn" onclick="window.open('https://mathgameswtf.github.io/g-genizy/iframe/{PATHNAME}', '_blank')">Open in New Tab</button>
         </div>
 
         <div id="ad-middle" style="text-align: center; margin: 2rem 0;">
@@ -271,7 +271,7 @@ sitemap = """<?xml version="1.0" encoding="UTF-8"?>
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://genizymath.github.io/</loc>
+    <loc>https://mathgameswtf.github.io/g-genizy/</loc>
   </url>
 """;
 
@@ -302,7 +302,7 @@ async def process_game(session: ClientSession, game: dict, OUTPUT_DIR: str, GAME
                                .replace('{GAME_COVER}', game_cover.replace(
                                    "{COVER_URL}", 
                                    "https://cdn.jsdelivr.net/gh/freebuisness/covers@main"))\
-                               .replace('{GAME_URL}', "/iframe/"+pathname)\
+                               .replace('{GAME_URL}', "/g-genizy/iframe/"+pathname)\
                                .replace('{PATHNAME}', pathname)
     game_url = f'https://cdn.jsdelivr.net/gh/freebuisness/html@main/{pathname}'
     game_html = await fetch_text(session, game_url)
